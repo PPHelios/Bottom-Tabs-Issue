@@ -13,7 +13,7 @@ import {NavigationContainer} from '@react-navigation/native';
 
 import Home from './screens/Home';
 import Settings from './screens/Settings';
-import { View } from 'react-native';
+import {View} from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
@@ -36,16 +36,16 @@ function App(): React.JSX.Element {
   return (
     <NavigationContainer>
       {/* <View style={{height: screenHeight, width}}> */}
-      <View style={{flex:1,position:"relative"}}>
-        <Tab.Navigator
-          screenOptions={{
-            tabBarHideOnKeyboard: true,
-            tabBarStyle: { position: 'absolute', bottom:0}
-          }}>
-          <Tab.Screen name="Home" component={Home} />
-          <Tab.Screen name="Settings" component={Settings} />
-        </Tab.Navigator>
-        </View>
+      {/* <View style={{flex:1,position:"relative"}}> */}
+      <Tab.Navigator
+        screenOptions={{
+          tabBarHideOnKeyboard: true,
+          tabBarStyle: {position: 'absolute', bottom: 0, left: 0, right: 0},
+        }}>
+        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="Settings" component={Settings} />
+      </Tab.Navigator>
+      {/* </View> */}
       {/* </View> */}
     </NavigationContainer>
   );
